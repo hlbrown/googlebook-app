@@ -1,4 +1,4 @@
-import gql from "graphql-tage";
+import gql from "graphql-tag";
 
 //exporting LOGIN_USER mutation
 export const LOGIN_USER = gql`
