@@ -5,6 +5,8 @@ import { Form, Button, Alert } from 'react-bootstrap';
 import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 
+import { useMutation } from '@apollo/react-hooks';
+
 const SignupForm = () => {
   //adding the user
   const [addUser] = useMutation(ADD_USER);
@@ -32,7 +34,7 @@ const SignupForm = () => {
 
     try {
       const { data } = await addUser({
-        variables: { ...userFormData },
+        variable: { ...userFormData },
       });
       // const response = await createUser(userFormData);
 
